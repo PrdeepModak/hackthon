@@ -1,0 +1,415 @@
+
+@media (prefers-reduced-motion: no-preference) {
+    * {
+      scroll-behavior: smooth;
+    }
+  }
+  
+  body{
+    overflow-x:hidden;
+  }
+  li > a {
+    color: inherit;
+    text-decoration: none;
+  }
+  header {
+    width: 100%;
+    height: 50px;
+    background-color: #1b1b32;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    position: fixed;
+    top: 0;
+  }  
+nav {
+    width: 50%;
+    max-width: 300px;
+    height: 50px;
+  }
+  nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    /* align-items: center; */
+    padding-inline-start: 0;
+    margin-block: 0;
+    height: 100%;
+    
+  }
+  nav > ul > li {
+    color: #dfdfe2;
+    margin: 0 0.2rem;
+    padding: 0.2rem;
+    display: inline-block;
+    font-family: 'Baloo 2', sans-serif;
+  }
+  nav > ul > li:hover {
+    background-color: #9797f0;
+    color: #1b1b32;
+    cursor: pointer;
+  }
+/* CSS for welcome section */
+.welcome {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh; 
+    background:  linear-gradient(to right bottom, lightblue, rgb(42, 42, 147));;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    font-family: 'Baloo 2', sans-serif;
+
+  }
+  
+  .welcome h1 {
+    
+
+    font-size: 60px;
+    color: #152737;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-image: linear-gradient(to right bottom, lightblue, darkblue);
+    margin: 0;
+    font-family: 'Baloo 2', sans-serif;
+    
+  }
+  a{
+    text-decoration: none;
+  }
+  
+  
+  
+ 
+  /* scroll down button */
+  .scroll-down {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    width: 75px;
+    height: 80px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    bottom: 0;
+    transform: translateX(-50%);
+  }
+  
+  .scroll-down > label {
+    pointer-events: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: rgb(165, 167, 228);
+  }
+  
+  /* Mouse Scroll Animation */
+  .scroll-down::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    border-radius: 50%;
+    border: 2px solid white;
+    box-sizing: border-box;
+    animation: scroll-down 1.5s infinite;
+  }
+  #projects {
+    background-color: lightgray;
+    padding: 20px;
+    width: 100%;
+    height:600px;
+    background-image: url(bgproject.png);
+  }
+  
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .project {
+    width: 300px;
+    margin: 10px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 5px gray;
+  }
+
+  .project img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .project h2 {
+    text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+  }
+
+  .project p {
+    padding: 10px;
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+  }
+
+  
+  @keyframes scroll-down {
+    0% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+  }
+  .text {
+    font-size: 2rem;
+    color: black;
+    text-align: center;
+    /* Add a transition effect for the transform property */
+    transition: transform 0.3s;
+  }
+  
+  /* Text element on hover */
+  .text:hover {
+    /* Scale the text to 150% of its original size */
+    transform: scale(1.5);
+  }
+  p{
+    font-size: 1rem;
+    color:black;
+    text-align: center;
+    /* Add a transition effect for the transform property */
+    transition: transform 0.3s;
+    font-family: 'Poppins', sans-serif;
+    width:50%;
+  }
+
+  /* about me */
+  .about{
+    background:  linear-gradient(to right bottom, lightblue, rgb(42, 42, 147));
+  }
+ 
+  
+  .slider {
+    display: flex;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+  align-items: flex-end;
+  }
+
+  
+  .slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: rotate 8s infinite linear;
+    transform-origin: 50% 120.7%;
+  }
+  
+  .slider img:nth-child(1) {
+    animation-delay: 0s;
+  }
+  
+  .slider img:nth-child(2) {
+    animation-delay: -2s;
+  }
+  
+  .slider img:nth-child(3) {
+    animation-delay: -4s;
+  }
+  .slider img:nth-child(4) {
+    animation-delay: -6s;
+  }
+ 
+  
+  
+  @keyframes rotate {
+    100% {
+      transform: rotate(-360deg);
+    }
+  }
+  /* Create a container for the bubbles */
+.bubbles {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  /* Create a bubble using the pseudo-element ::before */
+  .bubbles::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: bubble-up 4s ease-in infinite;
+  }
+  
+  /* Create more bubbles using the pseudo-element ::after */
+  .bubbles::after {
+    content: "";
+    position: absolute;
+    left: 40%;
+    bottom: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    animation: bubble-up 6s ease-in infinite;
+  }
+  .fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+    border-radius: 50%;
+  }
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+    border-radius: 50%;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+    border-radius: 50%;
+  }  
+  .fa-github {
+    background: #0b0b0e;
+    color: white;
+    font-size: 36px;
+    border-radius: 50%;
+  }
+ 
+  /* Define the animation for the bubbles */
+  @keyframes bubble-up {
+    0% {
+      transform: translate(0, 0);
+      opacity: 0.5;
+    }
+    50% {
+      transform: translate(-10%, -50%);
+      opacity: 1;
+    }
+    100% {
+      transform: translate(-20%, -100%);
+      opacity: 0;
+    }
+  }
+  mains{
+    display:flex;
+    border-left:50px;
+  }
+  .footer {
+background-color: #bac7d2;
+    color: white;
+    padding: 10px;
+    
+  }
+  .r1,.r2,.r3,.r4 {
+    display: flex; /* Use flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping */
+    justify-content: space-between; /* Distribute the space evenly */
+    margin-bottom: 10px; /* Add some margin between rows */
+  }
+ 
+  h6{
+    font-size: medium;
+    font-family: 'Poppins', sans-serif;
+    color:#1b1b32;
+  }
+  r2{
+    color: azure;
+  }
+  a:link {
+    color: rgb(195, 195, 232); 
+  }
+  
+  a:visited {
+    color: purple; 
+  }
+  
+  a:hover {
+    color: red; 
+  }
+  
+  a:active {
+    color: green; 
+  }
+    
+.about-section{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.project:hover{
+    transform: scale(0.8);
+}
+h2{
+    font-family:'Poppins', sans-serif ;
+    text-decoration: underline;
+    font-size: 80px;
+}
+h1{
+    font-family: 'Baloo 2', sans-serif;
+    font-size: larger;
+    text-decoration: underline;
+}
+h6{
+    text-decoration: underline;
+}
+h3{
+    font-family: 'Baloo 2', sans-serif;
+    color: #dfdfe2;
+    font-size: 20px;
+}
